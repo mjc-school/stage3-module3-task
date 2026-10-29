@@ -123,17 +123,17 @@ implementing all validations in business logic code or declaratively, e.g. via c
 7. Convenient error/exception should be implemented: all errors should be meaningful. Errors should
    contain `errorMessage` and `errorCode`, where `errorCode` is your custom code.
 8. Application should be tested and pass all tests suites.
-9. Change archunit-junit dependency to archunit-junit5:  `testImplementation "com.tngtech.archunit:archunit-junit5:1.0.0"`
-10. Use javax `implementation "org.springframework.boot:spring-boot-starter-data-jpa:2.7.7"`. Exactly `2.7.7` version, because older versions is jakarta.
+9. Change archunit dependency to archunit-junit6:  `testImplementation "com.tngtech.archunit:archunit-junit6:1.5.1"`
+10. Use Spring Boot 4.1.2 (`org.springframework.boot` Gradle plugin) with `spring-boot-starter-data-jpa`. JPA entities use the `jakarta.persistence` package.
 
 #### Application requirements:
 
-1. Java 17 should be used.
-2. Gradle. Multi-module project. Spring Boot.
+1. Java 25 should be used.
+2. Gradle 9.1.0. Multi-module project. Spring Boot 4.
 3. Application packages root: `com.mjc.school`.
 4. Java Code Convention is mandatory.
 
 #### Our solution review:
 If you have finished task and would like to see the original solution of it written by our experts, write in #stage-3 channel about it. Access will be provided.
 
-[1]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#aop
+[1]: https://docs.spring.io/spring-framework/reference/7.0/core/aop.html
